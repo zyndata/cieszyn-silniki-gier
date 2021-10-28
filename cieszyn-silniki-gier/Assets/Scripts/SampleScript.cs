@@ -52,6 +52,25 @@ public class SampleScript : MonoBehaviour
 
     }
 
+    // == sprawdzenie równoœci
+
+    void IfEqualFunction()
+    {
+        if (number == 1)
+        {
+            //
+        }
+    }
+
+    void IfNotFunction()
+    {
+        if (number != 1)
+        {
+            //
+        }
+    }
+
+
     [ContextMenu("Print HP")] //context menu pozwala wywo³aæ metode w inspektorze
     public void PrintPlayerHp()
     {
