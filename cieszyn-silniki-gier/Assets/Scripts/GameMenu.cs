@@ -33,7 +33,6 @@ public class GameMenu : MonoBehaviour
         }
     }
 
-
     private void PauseGame()
     {
         pauseMenu.SetActive(true);
@@ -46,7 +45,6 @@ public class GameMenu : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-
     public void OnResumeClicked()
     {
         ResumeGame();
@@ -58,14 +56,4 @@ public class GameMenu : MonoBehaviour
     }
 
 
-    public void GetDamage()
-    {
-        //hpBar.fillAmount = hpBar.fillAmount - 0.1f;
-        hpBar.fillAmount -= 0.1f;
-    }
-
-    public void GetUsername()
-    {
-        Debug.Log("Hello " + userInputField.text + " !!");
-    }
 }

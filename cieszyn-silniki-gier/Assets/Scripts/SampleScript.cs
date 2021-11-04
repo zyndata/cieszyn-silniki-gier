@@ -82,4 +82,15 @@ public class SampleScript : MonoBehaviour
         return text.Length;
     }
 
+    private void Incrementation()
+    {
+        int a = 0;
+
+        a = 2;
+        a = a + 1; // to samo co a++
+
+        a = a + 5; //to samo co a+=5
+
+    }
+
 }
