@@ -6,8 +6,28 @@ using UnityEngine;
 public class PickupController : MonoBehaviour
 {
     public TextMeshProUGUI pickupCountMesh;
+    public int pickupOnMapCount = 3;
 
     private int pickupFoundCount = 0;
+
+
+
+    private void Start()
+    {
+        UpdatePickupText();
+    }
+
+    public bool GotAllPickups()
+    {
+        if (pickupFoundCount < pickupOnMapCount)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,9 +38,13 @@ public class PickupController : MonoBehaviour
             pickup.OnPickupFound();
             pickupFoundCount++;
 
-            pickupCountMesh.text = pickupFoundCount.ToString();
+            UpdatePickupText();
         }
+    }
 
+    private void UpdatePickupText()
+    {
+        pickupCountMesh.text = pickupFoundCount + " / " + pickupOnMapCount;
     }
 
 }
