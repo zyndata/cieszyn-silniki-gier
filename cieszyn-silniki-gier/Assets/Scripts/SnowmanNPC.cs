@@ -8,7 +8,12 @@ public class SnowmanNPC : MonoBehaviour
     public GameObject questStarted;
     public GameObject questFinished;
     public PickupController pickupController;
+    public Animator doorAnimator;
+    public Animator playerAnimator;
+    public AudioSource doorOpenSound;
+    public GameObject questCamera;
     private bool isQuestFinished = false;
+    private bool isPlayerNear = false;
 
 
     private void Start()
@@ -18,7 +23,14 @@ public class SnowmanNPC : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) == true)
+        //opcja 1
+        //if(isQuestFinished == true)
+        //{
+        //    return;
+        //}
+
+
+        if (Input.GetKeyDown(KeyCode.E) == true && isPlayerNear == true)
         {
             if (pickupController.GotAllPickups() == false)
             {
@@ -27,19 +39,31 @@ public class SnowmanNPC : MonoBehaviour
             }
             else
             {
-                questStarted.SetActive(false);
-                questFinished.SetActive(true);
+                //we have all presents
+                if (isQuestFinished == false) //opcja 2
+                {
+                    isQuestFinished = true;
+                    doorAnimator.Play("DoorOpen");
+                    playerAnimator.Play("Cheering");
+                    doorOpenSound.Play();
+                    questStarted.SetActive(false);
+                    questFinished.SetActive(true);
+                }
             }
         }
     }
 
     public void ShowUI()
     {
+        questCamera.SetActive(true);
         uiPanel.SetActive(true);
+        isPlayerNear = true;
     }
 
     public void HideUI()
     {
+        questCamera.SetActive(false);
+        isPlayerNear = false;
         uiPanel.SetActive(false);
         questStarted.SetActive(false);
         questFinished.SetActive(false);
