@@ -797,7 +797,7 @@ ModelImporter:
     second: r_eye
   - first:
       74: 7400000
-    second: closed_StopRoll
+    second: anim_closed_StopRoll
   - first:
       95: 9500000
     second: //RootNode
@@ -821,14 +821,50 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: anim_closed_StopRoll
+      takeName: closed_StopRoll
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.8126233
+        functionName: OnAttackEnd
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -849,7 +885,7 @@ ModelImporter:
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
-    skinWeightsMode: 0
+    skinWeightsMode: 1
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
@@ -875,7 +911,327 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: robotSphere@anim_closed_StopRoll(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: main_jt
+      parentName: robotSphere@anim_closed_StopRoll(Clone)
+      position: {x: -2.4651913e-33, y: 0.3243418, z: -0.09710188}
+      rotation: {x: -0.3407749, y: -0.6195744, z: 0.3407749, w: 0.6195744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rear_elbow_jt
+      parentName: main_jt
+      position: {x: -0.33146226, y: 0.019784806, z: 4.101954e-18}
+      rotation: {x: 0, y: 0, z: 0.8882879, w: -0.45928702}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rear_arm_jt
+      parentName: rear_elbow_jt
+      position: {x: -0.4225287, y: -2.4980017e-17, z: 3.4612287e-17}
+      rotation: {x: 0.051958833, y: 0.99864924, z: -5.796807e-17, w: -6.433119e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rear_arm_end
+      parentName: rear_arm_jt
+      position: {x: -0.5514697, y: 3.1190326e-16, z: -1.037371e-17}
+      rotation: {x: -0.4238288, y: -0.5660116, z: -0.4238288, w: 0.5660116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm2 1
+      parentName: rear_arm_jt
+      position: {x: -0.001248598, y: -0.0021597622, z: -1.1180986e-16}
+      rotation: {x: -0.4238288, y: -0.5660116, z: -0.4238288, w: 0.5660116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt7 1
+      parentName: arm2 1
+      position: {x: -0.05238014, y: 0.033406626, z: -0.027016161}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt5 1
+      parentName: arm2 1
+      position: {x: -0.05782828, y: -0.011502807, z: -0.031773906}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt8 1
+      parentName: arm2 1
+      position: {x: 0.052375313, y: 0.033406626, z: -0.027016161}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt6 1
+      parentName: arm2 1
+      position: {x: 0.057811297, y: -0.011502807, z: -0.031773906}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rear_plate
+      parentName: arm2 1
+      position: {x: 1.8749052e-24, y: -0.42591694, z: 0.038825348}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rear_arm
+      parentName: rear_elbow_jt
+      position: {x: 0.002949047, y: 0.0049063205, z: -3.6971198e-17}
+      rotation: {x: -0.39384702, y: 0.5872687, z: 0.39384702, w: 0.5872687}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt3 1
+      parentName: rear_arm
+      position: {x: -0.05238014, y: -0.031914998, z: 0.028762974}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt1 1
+      parentName: rear_arm
+      position: {x: -0.05782828, y: 0.013184527, z: 0.031113723}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt4 1
+      parentName: rear_arm
+      position: {x: 0.052375313, y: -0.031914998, z: 0.028762974}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt2 1
+      parentName: rear_arm
+      position: {x: 0.057811297, y: 0.013184527, z: 0.031113723}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ballJoint1 1
+      parentName: rear_arm
+      position: {x: -0, y: -0.04468265, z: -0.0033278132}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ballJoint2 1
+      parentName: rear_arm
+      position: {x: -0, y: 0.4026032, z: -0.10359246}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_elbow_jt
+      parentName: main_jt
+      position: {x: -0.17547102, y: -0.22623497, z: -0.16818541}
+      rotation: {x: -0.57342386, y: 0.65588814, z: 0.48314834, w: 0.08696925}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_arm_jt
+      parentName: right_elbow_jt
+      position: {x: -0.4225287, y: -2.2204459e-17, z: 2.3665826e-31}
+      rotation: {x: 0.05196309, y: 0.998649, z: -5.796779e-17, w: -6.433144e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_arm_end
+      parentName: right_arm_jt
+      position: {x: -0.5514697, y: 4.4408918e-17, z: -1.11022296e-17}
+      rotation: {x: -0.4238288, y: -0.5660116, z: -0.4238288, w: 0.5660116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm2 2
+      parentName: right_arm_jt
+      position: {x: -0.0012485986, y: -0.002159765, z: -2.4424904e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt7 2
+      parentName: arm2 2
+      position: {x: 0.03966035, y: -0.016520664, z: -0.05238014}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt5 2
+      parentName: arm2 2
+      position: {x: -0.0020941165, y: -0.033726994, z: -0.05782828}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt8 2
+      parentName: arm2 2
+      position: {x: 0.03966035, y: -0.016520664, z: 0.052375313}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt6 2
+      parentName: arm2 2
+      position: {x: -0.0020941165, y: -0.033726994, z: 0.057811297}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_plate
+      parentName: arm2 2
+      position: {x: -0.41962475, y: -0.082630076, z: 0.000000001895117}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_arm
+      parentName: right_elbow_jt
+      position: {x: 0.0029490464, y: 0.0049063247, z: -9.992007e-17}
+      rotation: {x: -0.0313478, y: -0.062697396, z: 0.5196553, w: 0.85149556}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt3 2
+      parentName: right_arm
+      position: {x: 0.04044364, y: 0.014497856, z: 0.05238014}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt1 2
+      parentName: right_arm
+      position: {x: -0.00038916498, y: 0.033789705, z: 0.05782828}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt4 2
+      parentName: right_arm
+      position: {x: 0.04044364, y: 0.014497856, z: -0.052375313}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt2 2
+      parentName: right_arm
+      position: {x: -0.00038916498, y: 0.033789705, z: -0.057811297}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ballJoint1 2
+      parentName: right_arm
+      position: {x: 0.04007629, y: -0.020037582, z: 0}
+      rotation: {x: 0.05557187, y: 0.044979766, z: 0.089369364, w: 0.99342924}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ballJoint2 2
+      parentName: right_arm
+      position: {x: -0.41179615, y: 0.056962002, z: 1.2212452e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_elbow_jt
+      parentName: main_jt
+      position: {x: -0.17547102, y: -0.22623497, z: 0.16818541}
+      rotation: {x: -0.57342416, y: 0.65588826, z: -0.48314798, w: -0.08696779}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_arm_jt
+      parentName: left_elbow_jt
+      position: {x: -0.4225287, y: 7.910339e-17, z: 1.590791e-17}
+      rotation: {x: 0.051958833, y: 0.99864924, z: -5.796807e-17, w: -6.433119e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_arm_end
+      parentName: left_arm_jt
+      position: {x: -0.5514697, y: 5.4158064e-16, z: -1.0355266e-17}
+      rotation: {x: -0.4238288, y: -0.5660116, z: -0.4238288, w: 0.5660116}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm2
+      parentName: left_arm_jt
+      position: {x: -0.001248598, y: -0.0021597622, z: -7.231323e-16}
+      rotation: {x: 0.5789609, y: 0.77318627, z: -0.15513211, w: 0.20717463}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt7
+      parentName: arm2
+      position: {x: 0.002793389, y: 0.033406626, z: 0.058870617}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt5
+      parentName: arm2
+      position: {x: 0.0013971325, y: -0.011502807, z: 0.06596771}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt8
+      parentName: arm2
+      position: {x: -0.049584337, y: 0.033406626, z: -0.03185027}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt6
+      parentName: arm2
+      position: {x: -0.05642266, y: -0.011502807, z: -0.034179103}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_plate
+      parentName: arm2
+      position: {x: 0.03362374, y: -0.42591694, z: -0.019412674}
+      rotation: {x: 0, y: 0.000000016644757, z: -0, w: 1}
+      scale: {x: 1.0100502, y: 1.0100502, z: 1.0100502}
+    - name: left_arm
+      parentName: left_elbow_jt
+      position: {x: 0.002949047, y: 0.0049063205, z: 3.9968028e-16}
+      rotation: {x: 0.29333305, y: -0.074688345, z: 0.8592116, w: 0.4124716}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt3
+      parentName: left_arm
+      position: {x: 0.051099535, y: -0.031914998, z: 0.03098105}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt1
+      parentName: left_arm
+      position: {x: 0.055859413, y: 0.013184527, z: 0.0345239}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt4
+      parentName: left_arm
+      position: {x: -0.001278191, y: -0.031914998, z: -0.059739836}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bolt2
+      parentName: left_arm
+      position: {x: -0.0019603749, y: 0.013184527, z: -0.06562292}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ballJoint1
+      parentName: left_arm
+      position: {x: -0.0028819707, y: -0.04468265, z: 0.0016639066}
+      rotation: {x: -0.009628534, y: 0.03434152, z: 0.108735256, w: 0.9934308}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ballJoint2
+      parentName: left_arm
+      position: {x: -0.0897137, y: 0.4026032, z: 0.05179623}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body
+      parentName: main_jt
+      position: {x: -0, y: 0, z: -3.330669e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyeLid
+      parentName: body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyeDome
+      parentName: main_jt
+      position: {x: 0.25277755, y: -0.27728504, z: 5.551658e-16}
+      rotation: {x: 0.3407749, y: 0.6195744, z: -0.3407749, w: 0.6195744}
+      scale: {x: 1.1979947, y: 1.1979947, z: 1.1979947}
+    - name: eyeDome1
+      parentName: eyeDome
+      position: {x: -1.1519361e-16, y: 0.000045680998, z: -0.000013554096}
+      rotation: {x: -0.3407749, y: -0.6195744, z: 0.3407749, w: 0.6195744}
+      scale: {x: 0.83472824, y: 0.83472824, z: 0.83472824}
+    - name: l_eye
+      parentName: eyeDome
+      position: {x: -0.03517041, y: 0.005175673, z: 0.02170073}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_eye
+      parentName: eyeDome
+      position: {x: 0.035142057, y: 0.005175653, z: 0.02170073}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyesVisor_manip
+      parentName: eyeDome
+      position: {x: -1.3246182e-16, y: -0.00096414884, z: 0.21925348}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lookingAt_manip
+      parentName: eyesVisor_manip
+      position: {x: 3.9443043e-32, y: -0.0000024344906, z: 0.36105198}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyes_manip
+      parentName: eyesVisor_manip
+      position: {x: -0, y: 0.005434688, z: -3.8009507e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: l_eye_manip
+      parentName: eyes_manip
+      position: {x: -0.034891635, y: -0.000021051039, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_eye_manip
+      parentName: eyes_manip
+      position: {x: 0.03487821, y: -0.000021051039, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle1
+      parentName: robotSphere@anim_closed_StopRoll(Clone)
+      position: {x: -0.17263675, y: 0.05405032, z: 0.09967188}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle2
+      parentName: robotSphere@anim_closed_StopRoll(Clone)
+      position: {x: 0.17263675, y: 0.05405032, z: 0.09967188}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle3
+      parentName: robotSphere@anim_closed_StopRoll(Clone)
+      position: {x: 3.0287314e-17, y: 0.05405032, z: -0.19934376}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -883,7 +1239,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 10
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
